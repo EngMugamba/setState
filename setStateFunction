@@ -1,0 +1,35 @@
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'My list'
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    
+    this.setState({
+      name: 'Odered list!'
+    });
+    
+  }
+  render() {
+    return (
+        
+        <div>
+        <section>
+        <button onClick={this.handleClick}>Click Me</button>
+        <ul>
+            <li>{this.state.name} </li>
+        </ul>
+        <ol>
+           <li>Dark Desire!</li>
+        </ol>
+        </section>
+       
+      </div>
+    
+      
+    );
+  }
+};
